@@ -16,6 +16,7 @@
     "eslint-plugin-html": "^6.0.0",
     "firebase": "^7.3.0",
     "node-sass": "^4.13.0",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
     "register-service-worker": "^1.6.2",
     "sass-loader": "^8.0.0",
@@ -44,6 +45,7 @@
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
+    "configFile": ".eslintrc.js",
     "root": true,
     "env": {
       "node": true
@@ -70,5 +72,10 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
