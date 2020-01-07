@@ -1,4 +1,4 @@
-# kf-store-survey
+# Front-end Template
 
 ## Project setup
 ```
