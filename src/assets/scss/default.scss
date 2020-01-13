@@ -1,0 +1,131 @@
+@import 'variables';
+
+body,
+html {
+	margin: 0;
+  padding: 0; // margin: 8px;
+  font-family: 'Poppins', sans-serif;
+  background-color: white;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+																	not supported by any browser */
+  * {
+    box-sizing: border-box;
+  }
+}
+
+// Change the default autofill color
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0px;
+  -webkit-text-fill-color: inherit;
+  box-shadow: 0 0 0px 1000px $input-bg inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+	padding: 0;
+}
+
+
+a {
+  text-decoration: none;
+	color: inherit;
+	cursor: pointer;
+  &:visited {
+    text-decoration: none;
+  }
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  border-radius: 0;
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+}
+
+select {
+  background: transparent;
+  border: none;
+  outline: none;
+  option {
+    color: black !important;
+  }
+}
+
+
+.checkmark-icon {
+	position: relative;
+
+	&::before {
+		content: "";
+    width: 4px;
+    height: 12px;
+    position: absolute;
+    transform: translate( -6.2px, 0 ) rotate( -40deg );
+    bottom: calc( 50% - 9px );
+		border-radius: 0;
+		background: white;
+	}
+
+	&::after {
+		content: "";
+    width: 4px;
+    height: 19px;
+    position: absolute;
+    transform: translate( 1.6px, 0 ) rotate( 42deg );
+    bottom: calc( 50% - 9.5px );
+		border-radius: 0;
+		background: white;
+	}
+}
+
+.arrow-icon {
+  position: relative;
+
+  &::before,
+  &::after {
+		content: ' ';
+		height: 3px;
+		width: 12px;
+		border-radius: 2px;
+		background: $color-primary;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  &::before {
+    transform: translate(-50%, calc(-100% - 2px)) rotate(-45deg);
+  }
+
+  &::after {
+    transform: translate(-50%, calc(0% + 2px)) rotate(-135deg);
+  }
+}
